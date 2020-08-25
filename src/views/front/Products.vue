@@ -96,7 +96,8 @@ export default {
         .then((res) => {
           if (res.status === 200) {
             if (vm.category === '') {
-              vm.products = res.data.data;
+              const filterthings = res.data.data.filter((item) => item.category !== '助養動物');
+              vm.products = filterthings;
             } else {
               const filterProducts = res.data.data.filter((item) => vm.category === item.category);
               // console.log()
