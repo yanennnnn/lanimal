@@ -167,10 +167,6 @@ export default {
         default:
           break;
       }
-      // if (isNew) {
-      //   vm.tempCoupon = {};
-      //   $('#couponModal').modal('show');
-      // } else if ()
     },
     updateCoupon() {
       const vm = this;
