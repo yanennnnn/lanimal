@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0df217"],{8933:function(n,e,t){"use strict";t.r(e);var s=function(){var n=this,e=n.$createElement;n._self._c;return n._m(0)},a=[function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",{staticClass:"mt-5"},[t("p",[n._v("助養頁面")])])}],c={name:"AnimalSponsorship"},l=c,r=t("2877"),i=Object(r["a"])(l,s,a,!1,null,null,null);e["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0df217.cf9da436.js.map
