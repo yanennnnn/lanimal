@@ -218,16 +218,36 @@ export default {
     left: 0;
     right: 0;
     background: rgba(0,0,0,.5);
-    z-index: 9999;
+    z-index: 3;
     transition:top .8s;
   }
   .products-list:hover .card-img::before{
-    content: '查看更多';
+    content: '';
     text-align: center;
-    line-height: 200px;
+    // line-height: 200px;
     top: 0;
     color:honeydew;
+    // transition:top .8s ;
     cursor: pointer;
+  }
+  .card-img::after{
+    content:'';
+    position: absolute;
+    top: 45%;
+    bottom:0;
+    left: 0;
+    right: 0;
+    transition:top .8s;
+    z-index: 4;
+  }
+  .products-list:hover .card-img::after{
+      content: '查看更多';
+      text-align: center;
+      line-height: 200px;
+      top: 0;
+      color:honeydew;
+      // transition:top .8s ;
+      cursor: pointer;
   }
   .products-list .price{
     font-size: 20px;

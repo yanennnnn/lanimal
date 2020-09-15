@@ -1,0 +1,115 @@
+$title-size:44px;
+$title-pad-size:40px;
+$title-phone-size:36px;
+$sec-size:40px;
+$sec-pad-size:36px;
+$sec-phone-size:32px;
+$text-size:20px;
+$text-pad-size:16px;
+$text-phone-size:14px;
+
+.box-shadow{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.inner-show{
+  animation: toTop 1.5s forwards;
+}
+@mixin bg-cover($pos) {
+  background-size: cover;
+  background-position: $pos;
+  background-repeat: no-repeat;
+}
+.bg-cover{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@keyframes shadow{
+  from{
+    transform: translateY(170%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rightToLeft {
+  from{
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRight {
+  from{
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes down{
+  20%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 0;
+  }
+}
+
+@keyframes rightloop{
+  // from{
+  //   margin-left: 2px;
+  //   opacity: 1;
+  // }
+  100%{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+@keyframes toTop{
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes drawBorder{
+  0% {
+    background-size:    0 3px,
+                        3px 0,
+                        0 3px,
+                        3px 0;
+}
+25% {
+    background-size:    100% 3px,
+                        3px 0,
+                        0 3px,
+                        3px 0;
+}
+50% {
+    background-size:    100% 3px,
+                        3px 100%,
+                        0 3px,
+                        3px 0;
+}
+75% {
+    background-size:    100% 3px,
+                        3px 100%,
+                        100% 3px,
+                        3px 0;
+}
+100% {
+    background-size:    100% 3px,
+                        3px 100%,
+                        100% 3px,
+                        3px 100%;
+}
+}

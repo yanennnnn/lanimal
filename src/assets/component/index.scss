@@ -1,0 +1,245 @@
+.bg{
+  // background-image: url('https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844229_1280.png');
+  background-color: rgba($color: rgb(255, 194, 72), $alpha: 1.0);
+  height: 100vh;
+};
+.banner{
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__cloud{
+    // height: 100vh;
+    // position: relative;
+    position: absolute;
+    animation:shadow 1s 2.5s forwards;
+    height: 100px;
+    width: 100px;
+    bottom: 0px;
+    transform: translateY(200%);
+    right: 0px;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    box-shadow: -10px 40px 0 50px #fff,
+    -120px 40px 0 110px #fff,
+    -290px 40px 0 90px #fff,
+    -420px 70px 0 70px #fff,
+    -590px 30px 0 70px #fff,
+    -750px 30px 0 130px #fff,
+    -980px 40px 0 100px #fff,
+    -1120px 50px 0 70px #fff,
+    -1300px 40px 0 100px #fff,
+    -1420px 30px 0 70px #fff,
+    -1590px 40px 0 90px #fff,
+    -1680px 70px 0 70px #fff,
+    -1820px 30px 0 70px #fff,
+    -2000px 30px 0 130px #fff,
+    -2140px 40px 0 100px #fff,
+    -2340px 50px 0 70px #fff,
+    -2400px 40px 0 50px #fff,
+    -2520px 30px 0 100px #fff,
+    -2690px 40px 0 40px #fff,
+    -2780px 70px 0 70px #fff,
+    -2820px 30px 0 70px #fff,
+    -2900px 30px 0 120px #fff,
+    -3040px 40px 0 50px #fff,
+    -3140px 50px 0 70px #fff,
+    -3200px 40px 0 50px #fff;
+  }
+  &__dog1{
+    // height: 100vh;
+    position: absolute;
+    animation:shadow 1s 3.5s forwards;
+    background-image: url('./assets/imgs/dogs-5457759_1280-2.png');
+    @include bg-cover(center center);
+    width: 85px;
+    height: 140px;
+    bottom: 100px;
+    transform: translateY(170%);
+    right: 1%;
+  }
+  &__dog2{
+    // height: 100vh;
+    position: absolute;
+    animation:shadow 1s 3s forwards;
+    background-image: url('./assets/imgs/dogs-5457759_12801.png');
+    @include bg-cover(center center);
+    width: 85px;
+    height: 170px;
+    bottom: 100px;
+    transform: translateY(170%);
+    right: 7%;
+  }
+  &__inner{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    &__bg{
+      background-image: url('https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_1280.jpg');
+      @include bg-cover(center center);
+      // background-repeat: no-repeat;
+      height: 860px;
+      width: 45%;
+      transform: translateX(-150%);
+      opacity: 0;
+      border-radius: 10px;
+      margin-top:$title-size;
+      margin-left: 5%;
+      padding:20px;
+      border:2px solid #ffffff;
+      animation: leftToRight 2.8s 3.9s ease forwards;
+    }
+    &__text{
+      align-self: center;
+      font-size: 50px;
+      color:white;
+      width: 40%;
+      padding:25px 0;
+      transform: translateX(200%);
+      opacity: 0;
+      background:rgba($color: #000000, $alpha: 0.7);
+      border-radius: 0 10px 10px 0;
+      animation: rightToLeft 2.8s 3.9s ease forwards;
+      div a {
+        width: 200px;
+        span{
+          display: inline-block;
+        }
+        &:hover span{
+          animation: rightloop 1.5s infinite ;
+        }
+      }
+    }
+  }
+  &__down{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(170%);
+    animation:shadow 1s 2.5s forwards;
+    ul{
+      height: auto;
+      padding:5px;
+      width: 25px;
+      border:1px solid $primary;
+      border-radius: 15px;
+      li{
+        opacity: 0;
+        &:first-child{
+          animation: down 2.5s infinite linear;
+        }
+        &:nth-child(2){
+          animation: down 2.5s .5s infinite linear;
+        }
+        &:nth-child(3){
+          animation: down 2.5s 1s infinite linear;
+        }
+        &:nth-child(4){
+          animation: down 2.5s 1.5s infinite linear;
+        }
+      }
+    }
+    &--circle{
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $primary;
+      padding:4px;
+      margin:4px auto;
+    }
+  }
+}
+
+.introduction{
+  &__plan{
+    .plan--qus,.plan--ans{
+      opacity: 0;
+      transform: translateY(20%); 
+      margin-bottom: 100px;
+    }
+    // height: 100vh;
+    .plan--qus{
+     
+      div p::first-letter{
+        font-size: 30px;
+        // color: #8A2BE2;
+        // margin-top: 10px;
+      }
+    }
+    .border-p{
+      // border:2px solid $primary;
+      animation: drawBorder 3s 1s forwards;
+      background-repeat: no-repeat;
+      background-image:linear-gradient(to right, $primary 100%, $secondary 100%),
+      linear-gradient(to bottom, $primary 100%, $primary 100%),
+      linear-gradient(to right, $primary 100%, $primary 100%),
+      linear-gradient(to bottom, $primary 100%, $primary 100%);
+      background-size:0 3px,
+      3px 0,
+      0 3px,
+      3px 0;
+      background-position: 0 0,
+      100% 0,
+      100% 100%,
+      0 100%;
+    }
+  }
+  &__animal{
+      // background-image: linear-gradient(to bottom,$light 50%,$primary 50%);
+    ul{
+      margin-top: 50px;
+      margin-bottom: 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-auto-rows: 300px;
+      grid-auto-flow: column;
+      li{
+        @include bg-cover(center center);
+        grid-column-start: auto;
+        position: relative;
+        transition: 1.5s;
+        // grid-column-end: span 1;
+        // grid-row-end:span 1;
+        grid-row-start: auto;
+        &:nth-child(3){
+          grid-column-end:span 2;
+          grid-row-end:span 2;
+        }
+        &:hover{
+          transform: scale(1.1);
+          z-index: 1;
+          .hoverbg{
+            opacity: 1;
+            span i{
+              animation: rightloop 1.5s infinite ;
+            }
+          }
+        }
+        .hoverbg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba($color: #202020, $alpha: 0.5);
+          opacity: 0;
+          transition: .8s;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          cursor: pointer;
+          span{
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.subscription{
+  background-color:rgb(248, 229, 190);
+    // background:url('https://images.unsplash.com/photo-1585754376010-13fee3beedb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') fixed;
+    height: 300px;
+    @include bg-cover(top center);
+}
